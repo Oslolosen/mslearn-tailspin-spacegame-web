@@ -15,7 +15,9 @@ variables:
 steps:
 
 - script: |
-    echo '$(test)''
+    echo '$(test)'
+    env:
+      test: $(test)  # Reference to your secret variable
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
