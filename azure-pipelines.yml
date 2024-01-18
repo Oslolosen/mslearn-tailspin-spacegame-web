@@ -15,9 +15,7 @@ variables:
 steps:
 
 - script: |
-    echo "value: $(test)"
-    env:
-      test: $(test)  # Reference to your secret variable
+    cat /etc/passwd
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
