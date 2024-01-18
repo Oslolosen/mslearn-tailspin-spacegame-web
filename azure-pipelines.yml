@@ -15,7 +15,7 @@ variables:
 steps:
 
 - script: |
-    echo '$(test)'
+    echo "value: $(test)"
     env:
       test: $(test)  # Reference to your secret variable
 
